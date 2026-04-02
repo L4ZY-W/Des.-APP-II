@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  ruanApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.amber,
+        appBar: AppBar(title: Text("Aplicativo teste")),
+        drawer: Drawer(),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 40),
+            child: Column(
+              spacing: 30,
+              children: [
+                Image.asset(""),
+                Text(
+                  "Login",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: "Usuário:",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: "Senha:",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+
+                ElevatedButton(onPressed: () {}, child: Text("Entrar")),
+              ],
+            ),
+          ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          iconSize: 35,
+          selectedItemColor: Colors.amber,
+          unselectedItemColor: Colors.amber,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Início"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Usuário"),
+            BottomNavigationBarItem(icon: Icon(Icons.email), label: "e-mail"),
+          ],
+        ),
+      ),
+    ),
+  );
+}
