@@ -12,7 +12,7 @@ void main(){
   double? nota1 = double.tryParse(nota1string??"");
 
 while (nota1 == null){
-    stdout.write("por favor insira uma nota1 valida: ");
+    stdout.write("por favor insira uma nota valida: ");
   
   nota1string = stdin.readLineSync();
   nota1 = double.tryParse(nota1string??"");
@@ -23,7 +23,7 @@ while (nota1 == null){
   double? nota2 = double.tryParse(nota2string??"");
 
 while (nota2 == null){
-    stdout.write("por favor insira uma nota2 valida: ");
+    stdout.write("por favor insira uma nota valida: ");
   
   nota2string = stdin.readLineSync();
   nota2 = double.tryParse(nota2string??"");
@@ -32,6 +32,10 @@ while (nota2 == null){
   double media = (nota1 + nota2) / 2;
 
 
-  print("a media do aluno $nome com nota $nota1 e $nota2 é: $media");
+  print("\nDados do aluno\n"
+  "Nome: $nome\n"
+  "Nota 1: $nota1\n"
+  "Nota 2: $nota2\n"
+  "Média: $media\n");
 
 }
