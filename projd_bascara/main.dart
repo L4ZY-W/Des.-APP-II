@@ -1,7 +1,13 @@
+import 'dart:io';
 import 'dart:math';
 
 void main() {
-  double a = 1, b = -5, c = 6;
+  stdout.write("\nCálculo de Bascara\n""Insira um número inteiro negativo: ");
+  double a = double.parse(stdin.readLineSync()!);
+  stdout.write("Insira um número inteiro positivo: ");
+  double b = double.parse(stdin.readLineSync()!);
+  stdout.write("Insira mais um número inteiro positivo: ");
+  double c = double.parse(stdin.readLineSync()!);
   
   // Cálculo de Delta
   double delta = pow(b, 2) - (4 * a * c);
